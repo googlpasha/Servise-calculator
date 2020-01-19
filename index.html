@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Form</title>
+</head>
+<body>
+    <section class="formSect">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form__head">
+                        <h2 class="form__head__title">
+                            КАЛЬКУЛЯТОР
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form__main">
+                        <p class="form__main__text">
+                            Обращаем Ваше внимание, что цены, рассчитываемые калькулятором, усредненные, представлены для ознакомления и не являются публичной офертой.
+                        </p>
+                    </div>
+                    <form action="">
+                    <table class="table table-striped" border="1">
+                        <tbody>
+                          <tr>
+                            <td>Вариант планировки:</td>
+                            <td>
+                                <!-- I'm not suer about it-->
+                                <select id="vnutren_plan" onchange="vnutren_plan_func()">
+                                    <option value="0">БК-1</option>
+                                    <option value="4000">БК-2,БК-3</option>
+                                    <option value="7000">БК-4</option>
+                                </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Внутренняя отделка:</td>
+                            <td>
+                                <select id="vnutren_otdel" onchange="vnutren_otdel_func()">
+                                    <option value="66000">ДВП(оргалит) 3,2 мм</option> <!--I delited some values here -->
+                                    <option value="70000">ДВПО</option> <!--I delited some values here -->
+                                    <option value="73000">Вагонка</option> <!--I delited some values here -->
+                                    <option value="73500">ОСП(OSB)</option> <!--I delited some values here -->
+                                    <option value="74000">ПВХ</option> <!--I delited some values here -->
+                                    <option value="76000">МДФ</option> <!--I delited some values here -->
+                                    <option value="81000">ЛДСП</option> <!--I delited some values here -->
+                                </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Наружная отделка:</td>
+                            <td>
+                                <select id="narugn_otdel" onchange="narugn_otdel_func()">
+                                    <option value="0">Профлист оцинкованный "С-8" 0,4 мм</option>
+                                    <option value="9500">Профлист с полимерным покрытием</option>
+                                    <option value="25500">Блок-хаус (имитация бревна)</option>
+                                </select>
+                            </td>
+                          </tr>
+                          <tr>
+                                <td>Утепление:</td>
+                                <td>
+                                    <select id="uteplenie" onchange="uteplenie_func()">
+                                        <option value="0">Мин.вата Knauf 50мм</option>
+                                        <option value="5500">Мин.вата Knauf 100мм</option>
+                                        <option value="3500">Плитный Knauf 50мм</option>
+                                        <option value="8500">Плитный Knauf 100мм</option>
+                                        <option value="6500">Базальтовая плита 50мм</option>
+                                        <option value="14000">Базальтовая плита 100мм</option>
+                                        <option value="25000">Пеноплэкс 50мм</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Пол:</td>
+                                <td>
+                                    <select id="pol" onchange="pol_func()">
+                                        <option value="0">ДСП 16мм</option>
+                                        <option value="7500">Линолеум полукоммерческий</option>
+                                        <option value="8500">ЦСП 20мм</option>
+                                        <option value="8500">ОСП (OSB) 18мм</option>
+                                        <option value="13500">Фанера ФСФ 18мм</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Окно:</td>
+                                <td>
+                                    <select id="window" onchange="window_func()">
+                                        <option value="0">Деревянное 800*1000</option>
+                                        <option value="6000">Окно ПВХ 900*1100 п/о</option>
+                                        <option value="4500">Ставни металлические</option>
+                                        <option value="2500">Решетка металлическая</option>
+                                        <option value="9500">Рольставни механические</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">Дополнительная комплектация:</td>
+                                <td>
+                                    <div class="form-group"><input type="checkbox" name="" value="3000" id="chb1" onchange="chb(this)"> Дополнительное окно деревянное 800х1000мм, Кол-во: <input type="text" value="1" id="chb1count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="6000" id="chb2" onchange="chb(this)"> Окно ПВХ однокамерное, п/о 900x1100, Кол-во: <input type="text" value="1" id="chb2count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="10000" id="chb3" onchange="chb(this)"> Дверь входная металлическая (Россия) утепленная, Кол-во:  <input type="text" value="1" id="chb3count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="17000" id="chb4" onchange="chb(this)"> Дверь входная противопожарная, Кол-во:<input type="text" value="1" id="chb4count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="2800" id="chb5" onchange="chb(this)"> Дополнительная дверь межкомнатная (оргалитовая), Кол-во:<input type="text" value="1" id="chb5count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="6500" id="chb6" onchange="chb(this)"> Дверь межкомнатная (OLOVI) с фурнитурой, Кол-во:<input type="text" value="1" id="chb6count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="4500" id="chb7" onchange="chb(this)"> Дверь межкомнатная филёнчатая с ручками, Кол-во:<input type="text" value="1" id="chb7count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="2500" id="chb8" onchange="chb(this)"> Решетка металлическая на окно, Кол-во:<input type="text" value="1" id="chb8count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="3000" id="chb9" onchange="chb(this)"> Койка-место «Нары одноярусные», Кол-во:<input type="text" value="1" id="chb9count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="4600" id="chb10" onchange="chb(this)"> Койка-место «Нары двухъярусные», Кол-во: <input type="text" value="1" id="chb10count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="3500" id="chb11" onchange="chb(this)"> Кровать односпальная металлическая, Кол-во:<input type="text" value="1" id="chb11count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="6000" id="chb12" onchange="chb(this)"> Кровать двухъярусная металлическая, Кол-во:<input type="text" value="1" id="chb12count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">Электрика:</td>
+                                <td>
+                                    <div class="form-group"><input type="checkbox" name="" value="4500" id="chb13" onchange="chb(this)"> В гофре, Кол-во: <input type="text" value="1" id="chb13count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="5500" id="chb14" onchange="chb(this)"> В кабель-канале, Кол-во:<input type="text" value="1" id="chb14count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="7500" id="chb15" onchange="chb(this)"> Усиленная электрика с УЗО, Кол-во:<input type="text" value="1" id="chb15count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="2000" id="chb16" onchange="chb(this)"> Счетчик, Кол-во:<input type="text" value="1" id="chb16count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="500" id="chb17" onchange="chb(this)"> Дополнительная двойная розетка, Кол-во:<input type="text" value="1" id="chb17count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="1500" id="chb18" onchange="chb(this)"> Дополнительный светильник светодиодный (2х20 Вт), Кол-во:<input type="text" value="1" id="chb18count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="1500" id="chb19" onchange="chb(this)"> Дополнительный светильник светодиодный круглый, Кол-во:<input type="text" value="1" id="chb19count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="800" id="chb20" onchange="chb(this)"> Уличный силовой разъём «папа-мама», Кол-во:<input type="text" value="1" id="chb20count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="4500" id="chb21" onchange="chb(this)"> Электрический конвектор 1,5 кВт, Кол-во: <input type="text" value="1" id="chb21count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">Сантехника:</td>
+                                <td>
+                                    <div class="form-group"><input type="checkbox" name="" value="8500" id="chb22" onchange="chb(this)"> Унитаз, Кол-во: <input type="text" value="1" id="chb22count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="8500" id="chb23" onchange="chb(this)"> Раковина керамическая со смесителем, Кол-во:<input type="text" value="1" id="chb23count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="7000" id="chb24" onchange="chb(this)"> Умывальник «Мойдодыр», 17 л, Кол-во:<input type="text" value="1" id="chb24count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="9500" id="chb25" onchange="chb(this)"> Поддон душевой металлический со смесителем, Кол-во:<input type="text" value="1" id="chb25count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="10500" id="chb26" onchange="chb(this)"> Водонагреватель, 50 л, Кол-во:<input type="text" value="1" id="chb26count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                    <div class="form-group"><input type="checkbox" name="" value="35000" id="chb27" onchange="chb(this)"> Душевая кабина, Кол-во:<input type="text" value="1" id="chb27count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Услуги:</td>
+                                <td><div class="form-group"><input type="checkbox" name="" value="8000" id="chb28" onchange="chb(this)"> Доставка +70р каждый км, если доставка идёт за пределы КАД<input type="text" value="1" id="chb28count" onchange="chb(document.getElementById(this.id.slice(0,-5)))"></div></td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </form>
+                      <p>Итоговая стоимость: <span id="sum"></span> руб.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

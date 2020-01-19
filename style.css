@@ -1,0 +1,25 @@
+
+/* BLUE FORM HEADER */
+.form__head{
+    background-color: #01AFEC;
+    height: 40px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.form__head__title{
+    color: #fff;
+    font-weight: lighter;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+/* MAIN FORM CONTENT */
+
+.form__main{
+    background-color: #fff;
+}
+.form__main__text{
+    padding: 10px;
+}
