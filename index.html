@@ -37,31 +37,31 @@
                             <td>Вариант планировки:</td>
                             <td>
                                 <!-- I'm not suer about it-->
-                                <select id="vnutren_plan" onchange="vnutren_plan_func()">
+                                <select id="1" onchange="sel(this)">
                                     <option value="0">БК-1</option>
-                                    <option value="4000">БК-2,БК-3</option>
-                                    <option value="7000">БК-4</option>
+                                    <option value="1">БК-2,БК-3</option>
+                                    <option value="2">БК-4</option>
                                 </select>
                             </td>
                           </tr>
                           <tr>
                             <td>Внутренняя отделка:</td>
                             <td>
-                                <select id="vnutren_otdel" onchange="vnutren_otdel_func()">
-                                    <option value="66000">ДВП(оргалит) 3,2 мм</option> <!--I delited some values here -->
-                                    <option value="70000">ДВПО</option> <!--I delited some values here -->
-                                    <option value="73000">Вагонка</option> <!--I delited some values here -->
-                                    <option value="73500">ОСП(OSB)</option> <!--I delited some values here -->
-                                    <option value="74000">ПВХ</option> <!--I delited some values here -->
-                                    <option value="76000">МДФ</option> <!--I delited some values here -->
-                                    <option value="81000">ЛДСП</option> <!--I delited some values here -->
+                                <select id="2" class="selectMenu" onchange="sel(this)">
+                                    <option value="66000,70000,73000">ДВП(оргалит) 3,2 мм</option> <!--I delited some values here -->
+                                    <option value="70000,74500,79000">ДВПО</option> <!--I delited some values here -->
+                                    <option value="73000,78000,83000">Вагонка</option> <!--I delited some values here -->
+                                    <option value="73500,78000,84500">ОСП(OSB)</option> <!--I delited some values here -->
+                                    <option value="74000,78000,85500">ПВХ</option> <!--I delited some values here -->
+                                    <option value="76000,80000,87500">МДФ</option> <!--I delited some values here -->
+                                    <option value="81000,85000,91500">ЛДСП</option> <!--I delited some values here -->
                                 </select>
                             </td>
                           </tr>
                           <tr>
                             <td>Наружная отделка:</td>
                             <td>
-                                <select id="narugn_otdel" onchange="narugn_otdel_func()">
+                                <select id="3" class="selectMenu" onchange="sel(this)">
                                     <option value="0">Профлист оцинкованный "С-8" 0,4 мм</option>
                                     <option value="9500">Профлист с полимерным покрытием</option>
                                     <option value="25500">Блок-хаус (имитация бревна)</option>
@@ -71,7 +71,7 @@
                           <tr>
                                 <td>Утепление:</td>
                                 <td>
-                                    <select id="uteplenie" onchange="uteplenie_func()">
+                                    <select id="4" class="selectMenu" onchange="sel(this)">
                                         <option value="0">Мин.вата Knauf 50мм</option>
                                         <option value="5500">Мин.вата Knauf 100мм</option>
                                         <option value="3500">Плитный Knauf 50мм</option>
@@ -85,7 +85,7 @@
                             <tr>
                                 <td>Пол:</td>
                                 <td>
-                                    <select id="pol" onchange="pol_func()">
+                                    <select id="5" class="selectMenu" onchange="sel(this)">
                                         <option value="0">ДСП 16мм</option>
                                         <option value="7500">Линолеум полукоммерческий</option>
                                         <option value="8500">ЦСП 20мм</option>
@@ -97,7 +97,7 @@
                             <tr>
                                 <td>Окно:</td>
                                 <td>
-                                    <select id="window" onchange="window_func()">
+                                    <select id="6" class="selectMenu" onchange="sel(this)">
                                         <option value="0">Деревянное 800*1000</option>
                                         <option value="6000">Окно ПВХ 900*1100 п/о</option>
                                         <option value="4500">Ставни металлические</option>
